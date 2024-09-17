@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
+import { useRouter } from "next/navigation"
 import { InfinitySpin } from "react-loader-spinner"
 import CryptoWidget from "./NavbarWidget"
 
@@ -104,6 +105,7 @@ interface Wallet {
     const [isDialogOpen, setIsDialogOpen] = useState<boolean>(false)
     const [walletAddress, setWalletAddress] = useState<string>("")
     const [showManualForm, setShowManualForm] = useState<boolean>(false)
+    const router = useRouter()
   
     useEffect(() => {
       if (selectedWallet && isDialogOpen) {
@@ -129,11 +131,27 @@ interface Wallet {
       setShowManualForm(false)
     }
   
-    const handleConnectWallet = (e: React.FormEvent) => {
-      e.preventDefault()
-      console.log(`Connecting to ${selectedWallet?.name} with address: ${walletAddress}`)
-      // Implement your wallet connection logic here
-    }
+    const handleConnectWallet = async (e: React.FormEvent) => {
+      e.preventDefault();
+  
+      try {
+        const response = await fetch('/api/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ walletAddress, selectedWallet }),
+        });
+  
+        const data = await response.json();
+        if (data.success) {
+          router.push("/wallet")
+        } else {
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    };
   
     const handleManualConnect = () => {
       setShowManualForm(true)
