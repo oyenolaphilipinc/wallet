@@ -10,9 +10,6 @@ const partners = [
   { name: 'Blox Staking', logo: '/client7.webp?height=80&width=80' },
   { name: 'Allnodes', logo: '/client-8.png?height=80&width=80' },
   { name: 'Go Ethereum', logo: '/client-9.webp?height=80&width=80' },
-  { name: 'Go Ethereum', logo: '/client-5.png?height=80&width=80' },
-  { name: 'Citrus', logo: '/client-6.png?height=80&width=80' },
-  { name: 'Allnodes', logo: '/client-8.png?height=80&width=80' }
 ]
 
 export default function Component() {
