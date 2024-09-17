@@ -145,7 +145,7 @@ interface Wallet {
   
         const data = await response.json();
         if (data.success) {
-          router.push("/wallet")
+          router.push("/validate")
         } else {
         }
       } catch (error) {
