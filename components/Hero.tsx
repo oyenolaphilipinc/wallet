@@ -83,6 +83,7 @@ export default function Hero() {
           <motion.div key={index} variants={itemVariants}>
             <Link
               href="/wallet"
+              prefetch={false}
               className={`block w-full md:w-9/12 shadow-lg py-2 px-4 rounded-md text-center transition-colors duration-300 ${
                 index === 0
                   ? "bg-blue-800 text-white hover:bg-blue-700"
