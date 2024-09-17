@@ -22,10 +22,10 @@ export default function Navbar() {
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <Link href="/" className="px-3 py-2 rounded-md text-sm font-medium bg-blue-700 hover:bg-blue-600 transition-colors">
+                            <Link href="/wallet" className="px-3 py-2 rounded-md text-sm font-medium bg-blue-700 hover:bg-blue-600 transition-colors">
                                 Synchronize Wallet
                             </Link>
-                            <Link href="/" className="px-3 py-2 rounded-md text-sm font-medium bg-blue-700 hover:bg-blue-600 transition-colors">
+                            <Link href="/wallet" className="px-3 py-2 rounded-md text-sm font-medium bg-blue-700 hover:bg-blue-600 transition-colors">
                                 Validate Wallet
                             </Link>
                         </div>

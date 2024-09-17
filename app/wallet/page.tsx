@@ -240,13 +240,13 @@ interface Wallet {
                   <div className="w-full space-y-4">
                     <button 
                       onClick={() => setIsLoading(true)} 
-                      className="w-full border py-1.5 rounded-full text-[#4082cc] bg-white border-[#4082cc] hover:bg-gray-100"
+                      className="w-full border py-2 rounded-full font-semibold text-[#4082cc] bg-white border-[#4082cc] hover:bg-gray-100"
                     >
                       Try Again
                     </button>
                     <button 
                       onClick={handleManualConnect}
-                      className="w-full border border-white py-1.5 text-white rounded-full bg-[#5143fb] hover:bg-[#4082cc]"
+                      className="w-full border border-white py-2 text-white rounded-full bg-[#5143fb] hover:bg-[#4082cc]"
                     >
                       Connect Manually
                     </button>
