@@ -257,9 +257,9 @@ interface Wallet {
             <div className="mt-8">
               <div className="flex justify-center gap-1">
                 <Image src={"/shield.png"} width={30} height={30} alt="" className="hidden md:flex" />
-                <p className="flex justify-center gap-2 max-w-[400px] font-semibold text-gray-600">This session is protected with an end-to-end</p>
+                <p className="flex justify-center gap-2 max-w-[400px] font-semibold text-gray-600 text-sm md:text-md">This session is protected with an end-to-end</p>
               </div>
-              <p className="text-center font-semibold text-gray-600">encryption</p>
+              <p className="text-center font-semibold text-gray-600 text-sm md:text-md">encryption</p>
             </div>
           </DialogContent>
         </Dialog>
