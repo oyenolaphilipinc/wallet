@@ -70,14 +70,20 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate={controls}
-        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mt-12"
       >
         {[
-          "Manual Revoke",
-          "Wallet Address Cache",
-          "Contract withdrawal",
+          "Claim Reward",
+          "Synchronization",
+          "Rectification",
+          "Login issues",
+          "Wallet Compromised",
+          "Withdrawal",
           "Contract Validation",
           "Wallet Scan",
+          "Claim Airdrop",
+          "Bridge Transfer",
+          "Buy coins/Tokens",
           "Wallet Glitch"
         ].map((text, index) => (
           <motion.div key={index} variants={itemVariants}>
